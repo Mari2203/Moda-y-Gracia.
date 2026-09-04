@@ -1,0 +1,2667 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Moda y Gracia | Lujo que transforma</title>
+
+<style>
+:root{
+  --purple:#6d0b87;
+  --purple2:#a51cc4;
+  --deep:#100615;
+  --deep2:#1c0920;
+  --red:#d71945;
+  --red2:#ff3d65;
+  --pink:#ff78c8;
+  --gold:#d8b06a;
+  --cream:#fff3fa;
+  --muted:#cbb8ca;
+  --card:#210d27;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  background:
+    radial-gradient(
+      circle at 20% 0%,
+      #42104f 0,
+      #100615 38%,
+      #09030c 100%
+    );
+  color:var(--cream);
+  font-family:Arial,Helvetica,sans-serif;
+}
+
+button,
+input,
+select{
+  font:inherit;
+}
+
+button{
+  cursor:pointer;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:50;
+  background:rgba(10,3,13,.92);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid #63206e;
+}
+
+.nav{
+  max-width:1250px;
+  margin:auto;
+  padding:13px 20px;
+  display:flex;
+  align-items:center;
+  gap:25px;
+}
+
+.logo{
+  font-family:Georgia,serif;
+  font-size:25px;
+  line-height:.9;
+  white-space:nowrap;
+}
+
+.logo small{
+  display:block;
+  font-family:Arial;
+  font-size:8px;
+  letter-spacing:3px;
+  color:#e58bc8;
+  text-align:center;
+  margin-top:5px;
+}
+
+nav{
+  display:flex;
+  gap:22px;
+  flex:1;
+  justify-content:center;
+}
+
+nav a{
+  color:#fff;
+  text-decoration:none;
+  font-size:12px;
+  letter-spacing:1px;
+}
+
+nav a:hover{
+  color:#ff5c82;
+}
+
+.iconbtn,
+.cartbtn{
+  background:none;
+  border:1px solid #6d326f;
+  color:#fff;
+  border-radius:9px;
+  padding:9px 12px;
+}
+
+.cartbtn{
+  border-color:var(--red);
+  background:#5f0c2d;
+}
+
+.badge{
+  background:var(--red);
+  border-radius:50%;
+  padding:3px 7px;
+  font-size:11px;
+  margin-left:4px;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+  min-height:590px;
+  display:grid;
+  grid-template-columns:1fr 1.15fr 1fr;
+  align-items:center;
+  max-width:1400px;
+  margin:auto;
+  overflow:hidden;
+}
+
+.hero-img{
+  height:590px;
+  background-size:cover;
+  background-position:center;
+  filter:saturate(1.15);
+}
+
+.hero-img.left{
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(16,6,21,.2),
+      rgba(16,6,21,.75)
+    ),
+    url('https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=900&q=85');
+}
+
+.hero-img.right{
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(16,6,21,.75),
+      rgba(16,6,21,.2)
+    ),
+    url('https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=85');
+}
+
+.hero-center{
+  text-align:center;
+  padding:30px;
+}
+
+.crown{
+  font-size:48px;
+  color:var(--red2);
+}
+
+h1{
+  font:52px Georgia,serif;
+  margin:5px 0 8px;
+}
+
+.subtitle{
+  letter-spacing:5px;
+  color:#f19bd0;
+  font-size:12px;
+}
+
+.hero-copy{
+  max-width:520px;
+  margin:25px auto;
+  color:#eee;
+  line-height:1.7;
+}
+
+.btn{
+  border:1px solid var(--red2);
+  background:linear-gradient(
+    90deg,
+    #6d0b87,
+    #d71945
+  );
+  color:#fff;
+  padding:13px 22px;
+  border-radius:7px;
+  box-shadow:0 0 22px #9e1bb944;
+}
+
+.btn:hover{
+  transform:translateY(-1px);
+  filter:brightness(1.15);
+}
+
+/* =========================
+   GENERAL
+========================= */
+
+.section{
+  max-width:1250px;
+  margin:auto;
+  padding:60px 20px;
+}
+
+.section-title{
+  text-align:center;
+  font:34px Georgia,serif;
+  margin:0 0 8px;
+}
+
+.section-sub{
+  text-align:center;
+  color:var(--muted);
+  margin-bottom:28px;
+}
+
+/* =========================
+   CATALOG
+========================= */
+
+.catalog{
+  display:grid;
+  grid-template-columns:220px 1fr;
+  gap:18px;
+}
+
+.filters{
+  background:rgba(33,13,39,.9);
+  border:1px solid #61206b;
+  border-radius:12px;
+  padding:18px;
+  height:max-content;
+  position:sticky;
+  top:85px;
+}
+
+.filters h3{
+  font:18px Georgia,serif;
+}
+
+.filters label{
+  display:block;
+  color:#d9c6d8;
+  font-size:12px;
+  margin:14px 0 6px;
+}
+
+input[type=search],
+select,
+.email{
+  width:100%;
+  background:#120817;
+  border:1px solid #69306d;
+  color:#fff;
+  border-radius:7px;
+  padding:10px;
+}
+
+.color-row{
+  display:flex;
+  gap:8px;
+}
+
+.dot{
+  width:22px;
+  height:22px;
+  border-radius:50%;
+  border:2px solid #fff5;
+  cursor:pointer;
+}
+
+.dot:hover{
+  transform:scale(1.12);
+}
+
+.available-colors{
+  font-size:10px;
+  line-height:1.5;
+  color:#dcbdd9;
+  margin-top:8px;
+}
+
+.tabs{
+  display:flex;
+  gap:8px;
+  margin-bottom:14px;
+  flex-wrap:wrap;
+}
+
+.tab{
+  padding:10px 18px;
+  background:#180b1e;
+  border:1px solid #60306a;
+  color:#fff;
+  border-radius:7px;
+}
+
+.tab.active{
+  background:#77133f;
+  border-color:#ff3d65;
+}
+
+.toolbar{
+  display:flex;
+  gap:10px;
+  margin-bottom:16px;
+}
+
+.toolbar input{
+  flex:1;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:12px;
+}
+
+/* =========================
+   PRODUCT CARDS
+========================= */
+
+.card{
+  background:linear-gradient(
+    180deg,
+    #2a102f,
+    #17091b
+  );
+  border:1px solid #5d2665;
+  border-radius:10px;
+  overflow:hidden;
+  position:relative;
+  transition:.2s;
+}
+
+.card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 12px 30px #0008;
+}
+
+.product-img{
+  height:245px;
+  background-size:cover;
+  background-position:center;
+}
+
+.heart{
+  position:absolute;
+  right:9px;
+  top:9px;
+  border:0;
+  background:#160714bb;
+  color:#fff;
+  border-radius:50%;
+  width:32px;
+  height:32px;
+}
+
+.heart.liked{
+  color:#ff4f77;
+}
+
+.card-body{
+  padding:11px;
+}
+
+.tag{
+  font-size:9px;
+  color:#e89ac9;
+  letter-spacing:1px;
+}
+
+.name{
+  font:16px Georgia,serif;
+  margin:4px 0;
+}
+
+.international{
+  font-size:10px;
+  color:#d98fc2;
+  font-style:italic;
+  margin:2px 0;
+}
+
+.price{
+  font-weight:bold;
+  color:#fff;
+  margin:7px 0 10px;
+}
+
+.card-actions{
+  display:flex;
+  gap:6px;
+}
+
+.add{
+  flex:1;
+  padding:9px;
+  border:1px solid #ff3d65;
+  background:#671137;
+  color:#fff;
+  border-radius:6px;
+}
+
+.try{
+  padding:9px;
+  border:1px solid #7b4684;
+  background:#241027;
+  color:#fff;
+  border-radius:6px;
+}
+
+/* =========================
+   VIRTUAL DRESSING ROOM
+========================= */
+
+.man-try{
+  display:flex;
+  justify-content:center;
+  align-items:end;
+  min-height:390px;
+  background:
+    radial-gradient(
+      circle at 50% 30%,
+      #48114f,
+      #17091b 60%
+    );
+  border:1px solid #63276d;
+  border-radius:12px;
+  overflow:hidden;
+}
+
+.mannequin{
+  position:relative;
+  width:230px;
+  height:360px;
+  filter:drop-shadow(0 12px 20px #0009);
+}
+
+.m-head{
+  position:absolute;
+  width:62px;
+  height:70px;
+  border-radius:50%;
+  background:linear-gradient(
+    135deg,
+    #f3d0bf,
+    #b87564
+  );
+  left:84px;
+  top:5px;
+  border:3px solid #6c294f;
+}
+
+.m-neck{
+  position:absolute;
+  width:34px;
+  height:35px;
+  background:#d59b85;
+  left:98px;
+  top:62px;
+  border-radius:0 0 12px 12px;
+}
+
+.m-body{
+  position:absolute;
+  left:47px;
+  top:80px;
+  width:136px;
+  height:205px;
+  background:#d7a08b;
+  clip-path:polygon(
+    25% 0,
+    75% 0,
+    100% 24%,
+    86% 65%,
+    78% 100%,
+    22% 100%,
+    14% 65%,
+    0 24%
+  );
+  border:3px solid #6c294f;
+}
+
+.m-arm{
+  position:absolute;
+  top:91px;
+  width:38px;
+  height:175px;
+  background:#d7a08b;
+  border-radius:22px;
+  border:3px solid #6c294f;
+}
+
+.m-arm.l{
+  left:22px;
+  transform:rotate(9deg);
+}
+
+.m-arm.r{
+  right:22px;
+  transform:rotate(-9deg);
+}
+
+.m-leg{
+  position:absolute;
+  top:272px;
+  width:50px;
+  height:88px;
+  background:#c58b78;
+  border:3px solid #6c294f;
+  border-radius:0 0 18px 18px;
+}
+
+.m-leg.l{
+  left:65px;
+}
+
+.m-leg.r{
+  right:65px;
+}
+
+.garment{
+  position:absolute;
+  z-index:3;
+  left:54px;
+  top:91px;
+  width:122px;
+  height:194px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  font:700 13px Georgia,serif;
+  text-align:center;
+  text-shadow:0 2px 5px #000;
+}
+
+.garment.dress{
+  clip-path:polygon(
+    30% 0,
+    70% 0,
+    80% 20%,
+    100% 100%,
+    0 100%,
+    20% 20%
+  );
+  border-radius:8px 8px 20px 20px;
+  background:linear-gradient(
+    135deg,
+    #7b1593,
+    #d71945
+  );
+}
+
+.garment.pants{
+  top:150px;
+  height:135px;
+  clip-path:polygon(
+    20% 0,
+    80% 0,
+    95% 100%,
+    55% 100%,
+    50% 45%,
+    45% 100%,
+    5% 100%
+  );
+  background:linear-gradient(
+    90deg,
+    #8b1b9c,
+    #2a0a31
+  );
+}
+
+.garment.heel{
+  left:67px;
+  top:225px;
+  width:96px;
+  height:48px;
+  clip-path:polygon(
+    0 35%,
+    75% 35%,
+    100% 65%,
+    65% 78%,
+    48% 100%,
+    42% 72%,
+    0 70%
+  );
+  background:linear-gradient(
+    135deg,
+    #d71945,
+    #f5c7df
+  );
+}
+
+.garment.white{
+  background:linear-gradient(
+    135deg,
+    #fff,
+    #ddd1df
+  );
+  color:#3b153d;
+  text-shadow:none;
+}
+
+.garment.gold{
+  background:linear-gradient(
+    135deg,
+    #f5d48a,
+    #a87528
+  );
+}
+
+.purple{
+  background:#761a91;
+}
+
+.red{
+  background:#c5163f;
+}
+
+.black{
+  background:#111;
+}
+
+.white{
+  background:#f3e9e9;
+}
+
+.gold{
+  background:#bd9856;
+}
+
+/* =========================
+   SUSTAINABILITY
+========================= */
+
+.sustain{
+  background:linear-gradient(
+    135deg,
+    #180b20,
+    #350b2d
+  );
+  border-top:1px solid #70276d;
+  border-bottom:1px solid #70276d;
+}
+
+.sustain-grid{
+  display:grid;
+  grid-template-columns:1.2fr 1fr;
+  gap:30px;
+  align-items:center;
+}
+
+.pollution{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+
+.pollution div{
+  height:260px;
+  border-radius:12px;
+  background-size:cover;
+  background-position:center;
+  border:1px solid #7d3d78;
+}
+
+.river{
+  background-image:
+    url('https://images.unsplash.com/photo-1621451537084-482c73073a0f?auto=format&fit=crop&w=900&q=80');
+}
+
+.jungle{
+  background-image:
+    url('https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=900&q=80');
+}
+
+.sustain p{
+  line-height:1.75;
+  color:#e7d8e7;
+}
+
+.quote{
+  font:25px Georgia,serif;
+  color:#ff9bd0;
+  border-left:3px solid var(--red);
+  padding-left:18px;
+}
+
+.steps{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:12px;
+  margin-top:25px;
+}
+
+.step{
+  padding:20px;
+  background:#210d27;
+  border:1px solid #602a68;
+  border-radius:10px;
+  text-align:center;
+}
+
+.step b{
+  display:block;
+  margin:10px 0;
+}
+
+.step span{
+  color:#cbb8ca;
+  font-size:12px;
+  line-height:1.5;
+}
+
+/* =========================
+   DISCOUNTS
+========================= */
+
+.discounts{
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      #7d1235,
+      #19071e 45%,
+      #0d040f
+    );
+}
+
+.bonus-grid{
+  display:grid;
+  grid-template-columns:1.2fr repeat(3,1fr);
+  gap:12px;
+}
+
+.bonus{
+  padding:24px;
+  border:1px solid #753168;
+  border-radius:12px;
+  background:#240b2c;
+  text-align:center;
+}
+
+.bonus.big{
+  background:linear-gradient(
+    135deg,
+    #64103b,
+    #3d0a63
+  );
+}
+
+.big .number{
+  font:50px Georgia,serif;
+  color:#fff;
+}
+
+.coupon{
+  font-weight:bold;
+  color:#ff9fc8;
+}
+
+/* =========================
+   CART / ARMARIO
+========================= */
+
+.armario{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  z-index:60;
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  background:linear-gradient(
+    135deg,
+    #79118e,
+    #d71945
+  );
+  border:2px solid #ff9dbf;
+  color:#fff;
+  font-size:25px;
+  box-shadow:0 8px 30px #0009;
+}
+
+.drawer{
+  position:fixed;
+  right:-430px;
+  top:0;
+  width:410px;
+  height:100vh;
+  background:#130817;
+  z-index:70;
+  border-left:1px solid #6e286f;
+  transition:.3s;
+  display:flex;
+  flex-direction:column;
+  box-shadow:-20px 0 50px #0008;
+}
+
+.drawer.open{
+  right:0;
+}
+
+.drawer-head{
+  padding:18px;
+  border-bottom:1px solid #5e2764;
+  display:flex;
+  justify-content:space-between;
+}
+
+.drawer-head h2{
+  font:22px Georgia,serif;
+  margin:0;
+}
+
+.cart-items{
+  padding:15px;
+  overflow:auto;
+  flex:1;
+}
+
+.cart-item{
+  display:grid;
+  grid-template-columns:65px 1fr auto;
+  gap:10px;
+  padding:10px 0;
+  border-bottom:1px solid #38203d;
+}
+
+.thumb{
+  width:65px;
+  height:80px;
+  background-size:cover;
+  background-position:center;
+  border-radius:6px;
+}
+
+.qty{
+  display:flex;
+  align-items:center;
+  gap:7px;
+  margin-top:8px;
+}
+
+.qty button{
+  background:#2a112f;
+  border:1px solid #66336b;
+  color:#fff;
+  border-radius:4px;
+  width:25px;
+  height:25px;
+}
+
+.remove{
+  border:0;
+  background:none;
+  color:#ff6684;
+}
+
+.cart-foot{
+  padding:15px;
+  border-top:1px solid #5e2764;
+}
+
+.row{
+  display:flex;
+  justify-content:space-between;
+  margin:9px 0;
+}
+
+.total{
+  font-size:20px;
+}
+
+.empty{
+  text-align:center;
+  color:#bcaabd;
+  padding:50px 10px;
+}
+
+/* =========================
+   MODALS
+========================= */
+
+.overlay{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:#0009;
+  z-index:65;
+}
+
+.overlay.show{
+  display:block;
+}
+
+.toast{
+  position:fixed;
+  left:50%;
+  bottom:25px;
+  transform:translate(-50%,100px);
+  background:#280d31;
+  border:1px solid #d72b61;
+  padding:12px 18px;
+  border-radius:8px;
+  z-index:100;
+  transition:.3s;
+}
+
+.toast.show{
+  transform:translate(-50%,0);
+}
+
+.modal{
+  position:fixed;
+  inset:0;
+  z-index:90;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+  background:#000b;
+}
+
+.modal.show{
+  display:flex;
+}
+
+.modal-box{
+  width:min(850px,100%);
+  max-height:90vh;
+  overflow:auto;
+  background:#16091b;
+  border:1px solid #713071;
+  border-radius:15px;
+  padding:25px;
+  position:relative;
+}
+
+.close{
+  position:absolute;
+  right:15px;
+  top:12px;
+  border:0;
+  background:none;
+  color:#fff;
+  font-size:25px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1000px){
+  .grid{
+    grid-template-columns:repeat(3,1fr);
+  }
+
+  .hero{
+    grid-template-columns:1fr;
+  }
+
+  .hero-img{
+    display:none;
+  }
+
+  .sustain-grid{
+    grid-template-columns:1fr;
+  }
+
+  .bonus-grid{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+@media(max-width:750px){
+  nav{
+    display:none;
+  }
+
+  .catalog{
+    grid-template-columns:1fr;
+  }
+
+  .filters{
+    position:static;
+  }
+
+  .grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .steps{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .drawer{
+    width:100%;
+    right:-100%;
+  }
+}
+
+@media(max-width:480px){
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  .bonus-grid,
+  .steps{
+    grid-template-columns:1fr;
+  }
+
+  h1{
+    font-size:40px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+  <div class="nav">
+
+    <div class="logo">
+      MODA Y GRACIA
+      <small>LUJO QUE TRANSFORMA</small>
+    </div>
+
+    <nav>
+      <a href="#inicio">INICIO</a>
+      <a href="#catalogo">CATÁLOGO</a>
+      <a href="#sostenibilidad">SOSTENIBILIDAD</a>
+      <a href="#descuentos">DESCUENTOS</a>
+    </nav>
+
+    <button class="cartbtn" onclick="openCart()">
+      👜 Mi Armario
+      <span class="badge" id="cartCount">0</span>
+    </button>
+
+  </div>
+</header>
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero" id="inicio">
+
+  <div class="hero-img left"></div>
+
+  <div class="hero-center">
+
+    <div class="crown">♛</div>
+
+    <h1>Moda y Gracia</h1>
+
+    <div class="subtitle">
+      ELEGANCIA · LUJO · SOSTENIBILIDAD
+    </div>
+
+    <p class="hero-copy">
+      Descubre una nueva forma de vestir con elegancia.
+      En Moda y Gracia transformamos materiales reciclados
+      en prendas únicas, sofisticadas y llenas de personalidad.
+    </p>
+
+    <a href="#catalogo">
+      <button class="btn">
+        DESCUBRIR COLECCIÓN
+      </button>
+    </a>
+
+  </div>
+
+  <div class="hero-img right"></div>
+
+</section>
+
+<!-- =========================
+     CATALOG
+========================= -->
+
+<section class="section" id="catalogo">
+
+  <h2 class="section-title">
+    Colección Moda y Gracia
+  </h2>
+
+  <p class="section-sub">
+    35 piezas de lujo creadas con una visión sostenible.
+  </p>
+
+  <div class="catalog">
+
+    <!-- FILTERS -->
+
+    <aside class="filters">
+
+      <h3>Buscar tu estilo</h3>
+
+      <label>Buscar</label>
+
+      <input
+        type="search"
+        id="search"
+        placeholder="Ej. Palazzo, Rouge..."
+        oninput="renderProducts()"
+      >
+
+      <label>Categoría</label>
+
+      <select id="filterCat" onchange="renderProducts()">
+        <option value="todos">Todas</option>
+        <option value="vestido">Vestidos</option>
+        <option value="pantalon">Pantalones</option>
+        <option value="tacon">Tacones</option>
+      </select>
+
+      <label>Precio máximo</label>
+
+      <input
+        type="range"
+        id="maxPrice"
+        min="100000"
+        max="1200000"
+        step="50000"
+        value="1200000"
+        oninput="
+          document.getElementById('priceValue').textContent =
+          formatCOP(this.value);
+          renderProducts();
+        "
+      >
+
+      <div id="priceValue">
+        $1.200.000
+      </div>
+
+      <label>Color</label>
+
+      <div class="color-row">
+
+        <div
+          class="dot purple"
+          onclick="filterColor('morado')"
+          title="Morado">
+        </div>
+
+        <div
+          class="dot red"
+          onclick="filterColor('rojo')"
+          title="Rojo">
+        </div>
+
+        <div
+          class="dot black"
+          onclick="filterColor('negro')"
+          title="Negro">
+        </div>
+
+        <div
+          class="dot white"
+          onclick="filterColor('blanco')"
+          title="Blanco">
+        </div>
+
+        <div
+          class="dot gold"
+          onclick="filterColor('dorado')"
+          title="Dorado">
+        </div>
+
+      </div>
+
+      <div class="available-colors">
+        Colores disponibles:
+        morado · rojo · negro · blanco · dorado
+      </div>
+
+      <br>
+
+      <button
+        class="btn"
+        style="width:100%"
+        onclick="resetFilters()">
+        LIMPIAR FILTROS
+      </button>
+
+    </aside>
+
+    <!-- PRODUCTS -->
+
+    <main>
+
+      <div class="tabs">
+
+        <button
+          class="tab active"
+          onclick="setCat('todos',this)">
+          TODO
+        </button>
+
+        <button
+          class="tab"
+          onclick="setCat('vestido',this)">
+          VESTIDOS
+        </button>
+
+        <button
+          class="tab"
+          onclick="setCat('pantalon',this)">
+          PANTALONES
+        </button>
+
+        <button
+          class="tab"
+          onclick="setCat('tacon',this)">
+          TACONES
+        </button>
+
+      </div>
+
+      <div class="toolbar">
+
+        <input
+          type="search"
+          placeholder="Busca por nombre en español, francés o italiano..."
+          id="search2"
+          oninput="
+            document.getElementById('search').value=this.value;
+            renderProducts();
+          "
+        >
+
+      </div>
+
+      <div class="grid" id="productGrid"></div>
+
+      <p
+        style="
+          text-align:center;
+          color:#cbb8ca;
+          margin-top:20px;
+        ">
+        Todos los precios están expresados en
+        pesos colombianos (COP).
+      </p>
+
+    </main>
+
+  </div>
+
+</section>
+
+<!-- =========================
+     SUSTAINABILITY
+========================= -->
+
+<section class="sustain" id="sostenibilidad">
+
+  <div class="section">
+
+    <h2 class="section-title">
+      Lujo que cuida el planeta
+    </h2>
+
+    <p class="section-sub">
+      La moda también puede ser responsable.
+    </p>
+
+    <div class="sustain-grid">
+
+      <div class="pollution">
+
+        <div class="river"></div>
+
+        <div class="jungle"></div>
+
+      </div>
+
+      <div>
+
+        <p class="quote">
+          "Convertimos lo que otros desechan
+          en piezas que todos quieren llevar."
+        </p>
+
+        <p>
+          En Moda y Gracia todas nuestras prendas
+          están hechas de material reciclado como
+          basura plástica y prendas desechadas.
+        </p>
+
+        <p>
+          Nuestro proceso comienza recolectando
+          botellas, envases plásticos, textiles y
+          prendas que ya no son utilizadas.
+        </p>
+
+        <p>
+          Los materiales son clasificados, limpiados
+          y procesados. El plástico puede convertirse
+          en fibras textiles y las prendas antiguas
+          pueden reutilizarse como nuevas fibras.
+        </p>
+
+        <p>
+          Finalmente, estas fibras se convierten en
+          telas que nuestros diseñadores utilizan para
+          crear nuevas prendas elegantes y modernas.
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="steps">
+
+      <div class="step">
+        ♻️
+        <b>1. RECOLECTAR</b>
+        <span>
+          Recuperamos plástico y prendas
+          que ya no se utilizan.
+        </span>
+      </div>
+
+      <div class="step">
+        🧼
+        <b>2. TRANSFORMAR</b>
+        <span>
+          Limpiamos y procesamos los
+          materiales recuperados.
+        </span>
+      </div>
+
+      <div class="step">
+        🧵
+        <b>3. CREAR</b>
+        <span>
+          Convertimos los materiales
+          en nuevas fibras textiles.
+        </span>
+      </div>
+
+      <div class="step">
+        👗
+        <b>4. DISEÑAR</b>
+        <span>
+          Creamos prendas de lujo
+          con menor impacto ambiental.
+        </span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =========================
+     DISCOUNTS
+========================= -->
+
+<section class="discounts" id="descuentos">
+
+  <div class="section">
+
+    <h2 class="section-title">
+      Beneficios exclusivos
+    </h2>
+
+    <p class="section-sub">
+      Porque comprar sostenible también puede
+      tener recompensas.
+    </p>
+
+    <div class="bonus-grid">
+
+      <div class="bonus big">
+
+        <div class="number">
+          20%
+        </div>
+
+        <h3>
+          DESCUENTO DE BIENVENIDA
+        </h3>
+
+        <p>
+          Utiliza nuestro código especial
+          al realizar tu primera compra.
+        </p>
+
+        <div class="coupon">
+          GRACIA20
+        </div>
+
+        <br>
+
+        <button
+          class="btn"
+          onclick="copyCode('GRACIA20')">
+          COPIAR CÓDIGO
+        </button>
+
+      </div>
+
+      <div class="bonus">
+
+        <div style="font-size:35px">
+          🎁
+        </div>
+
+        <h3>
+          REGALO
+        </h3>
+
+        <p>
+          Recibe un accesorio sorpresa
+          en compras seleccionadas.
+        </p>
+
+      </div>
+
+      <div class="bonus">
+
+        <div style="font-size:35px">
+          ✨
+        </div>
+
+        <h3>
+          CLIENTE VIP
+        </h3>
+
+        <p>
+          Obtén beneficios exclusivos
+          en nuevas colecciones.
+        </p>
+
+      </div>
+
+      <div class="bonus">
+
+        <div style="font-size:35px">
+          ♻️
+        </div>
+
+        <h3>
+          ECO BONUS
+        </h3>
+
+        <p>
+          Entrega una prenda usada y
+          recibe beneficios especiales.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =========================
+     FLOATING CART
+========================= -->
+
+<button
+  class="armario"
+  onclick="openCart()"
+  title="Abrir Mi Armario">
+
+  👜
+
+  <span
+    id="floatingCount"
+    style="
+      position:absolute;
+      right:-3px;
+      top:-4px;
+      background:#fff;
+      color:#7b123e;
+      font-size:11px;
+      font-weight:bold;
+      border-radius:50%;
+      padding:4px 7px;
+    ">
+    0
+  </span>
+
+</button>
+
+<!-- =========================
+     OVERLAY
+========================= -->
+
+<div
+  class="overlay"
+  id="overlay"
+  onclick="closeCart()">
+</div>
+
+<!-- =========================
+     CART DRAWER
+========================= -->
+
+<aside class="drawer" id="drawer">
+
+  <div class="drawer-head">
+
+    <h2>
+      👜 Mi Armario
+    </h2>
+
+    <button
+      class="close"
+      onclick="closeCart()">
+      ×
+    </button>
+
+  </div>
+
+  <div
+    class="cart-items"
+    id="cartItems">
+  </div>
+
+  <div class="cart-foot">
+
+    <div class="row">
+      <span>Subtotal</span>
+      <strong id="subtotal">$0</strong>
+    </div>
+
+    <div class="row total">
+      <strong>Total</strong>
+      <strong id="total">$0</strong>
+    </div>
+
+    <button
+      class="btn"
+      style="width:100%;margin-top:10px"
+      onclick="checkout()">
+      CONTINUAR COMPRA
+    </button>
+
+  </div>
+
+</aside>
+
+<!-- =========================
+     TOAST
+========================= -->
+
+<div
+  class="toast"
+  id="toast">
+</div>
+
+<!-- =========================
+     VIRTUAL TRY-ON MODAL
+========================= -->
+
+<div
+  class="modal"
+  id="tryModal">
+
+  <div class="modal-box">
+
+    <button
+      class="close"
+      onclick="closeTry()">
+      ×
+    </button>
+
+    <h2
+      id="tryTitle"
+      style="font-family:Georgia,serif">
+      Probador virtual
+    </h2>
+
+    <p
+      id="tryDescription"
+      style="color:#d7c3d6">
+    </p>
+
+    <div class="man-try">
+
+      <div class="mannequin">
+
+        <div class="m-head"></div>
+
+        <div class="m-neck"></div>
+
+        <div class="m-body"></div>
+
+        <div class="m-arm l"></div>
+
+        <div class="m-arm r"></div>
+
+        <div class="m-leg l"></div>
+
+        <div class="m-leg r"></div>
+
+        <div
+          class="garment dress"
+          id="garment">
+        </div>
+
+      </div>
+
+    </div>
+
+    <p
+      id="tryDetails"
+      style="
+        text-align:center;
+        color:#d7c3d6;
+      ">
+    </p>
+
+  </div>
+
+</div>
+
+<!-- =========================
+     STORY MODAL
+========================= -->
+
+<div
+  class="modal"
+  id="storyModal">
+
+  <div class="modal-box">
+
+    <button
+      class="close"
+      onclick="closeStory()">
+      ×
+    </button>
+
+    <h2
+      style="
+        font:30px Georgia,serif;
+        color:#ff9bd0;
+      ">
+      La historia de Moda y Gracia
+    </h2>
+
+    <p>
+      Moda y Gracia nace con una idea:
+      demostrar que la elegancia y la sostenibilidad
+      pueden caminar juntas.
+    </p>
+
+    <p>
+      Cada prenda representa una segunda oportunidad
+      para materiales que anteriormente eran considerados
+      basura.
+    </p>
+
+    <p>
+      Nuestro objetivo es crear moda de lujo,
+      sofisticada y responsable con el planeta.
+    </p>
+
+  </div>
+
+</div>
+
+<script>
+
+/* =========================
+   IMÁGENES
+========================= */
+
+const imgs = [
+
+'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=700&q=85',
+
+'https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=700&q=85',
+
+'https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=700&q=85',
+
+'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=700&q=85',
+
+'https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=700&q=85',
+
+'https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?auto=format&fit=crop&w=700&q=85',
+
+'https://images.unsplash.com/photo-1550639525-c97d455acf70?auto=format&fit=crop&w=700&q=85',
+
+'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=700&q=85',
+
+'https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=700&q=85',
+
+'https://images.unsplash.com/photo-1585488433567-7a3f2e8f0d6b?auto=format&fit=crop&w=700&q=85',
+
+'https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=700&q=85',
+
+'https://images.unsplash.com/photo-1506629905607-d9c297d3d3f1?auto=format&fit=crop&w=700&q=85',
+
+'https://images.unsplash.com/photo-1551048632-24e5c2c9f7a3?auto=format&fit=crop&w=700&q=85',
+
+'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=700&q=85',
+
+'https://images.unsplash.com/photo-1548624313-0399d3f4d1a6?auto=format&fit=crop&w=700&q=85',
+
+'https://images.unsplash.com/photo-1566479179817-c0c9c4a1d9b1?auto=format&fit=crop&w=700&q=85',
+
+'https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?auto=format&fit=crop&w=700&q=85',
+
+'https://images.unsplash.com/photo-1550614000-4b9519e0929c?auto=format&fit=crop&w=700&q=85',
+
+'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=700&q=85',
+
+'https://images.unsplash.com/photo-1564584217132-2271feaeb3c5?auto=format&fit=crop&w=700&q=85',
+
+'https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=700&q=85',
+
+'https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=700&q=85',
+
+'https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=700&q=85',
+
+'https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=700&q=85',
+
+'https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?auto=format&fit=crop&w=700&q=85',
+
+'https://images.unsplash.com/photo-1548883354-94bcfe321cbb?auto=format&fit=crop&w=700&q=85',
+
+'https://images.unsplash.com/photo-1564584217132-2271feaeb3c5?auto=format&fit=crop&w=700&q=85',
+
+'https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=85',
+
+'https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=700&q=85',
+
+'https://images.unsplash.com/photo-1560343090-f0409e92791a?auto=format&fit=crop&w=700&q=85',
+
+'https://images.unsplash.com/photo-1560769629-975ec94e6a86?auto=format&fit=crop&w=700&q=85',
+
+'https://images.unsplash.com/photo-1515347619252-60a4bf4fff4f?auto=format&fit=crop&w=700&q=85',
+
+'https://images.unsplash.com/photo-1523779917675-b6ed3a42a561?auto=format&fit=crop&w=700&q=85',
+
+'https://images.unsplash.com/photo-1562183241-b937e95585b6?auto=format&fit=crop&w=700&q=85'
+
+];
+
+/* =========================
+   PANTALONES
+========================= */
+
+const trouserImgs = [
+
+'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=700&q=85',
+
+'https://images.unsplash.com/photo-1506629905607-d9c297d3d3f1?auto=format&fit=crop&w=700&q=85',
+
+'https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=700&q=85',
+
+'https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=700&q=85',
+
+'https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=700&q=85',
+
+'https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?auto=format&fit=crop&w=700&q=85',
+
+'https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?auto=format&fit=crop&w=700&q=85',
+
+'https://images.unsplash.com/photo-1603252110481-7ba873bf42ab?auto=format&fit=crop&w=700&q=85',
+
+'https://images.unsplash.com/photo-1591369822096-ffd140ec948f?auto=format&fit=crop&w=700&q=85',
+
+'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=700&q=85'
+
+];
+
+/* =========================
+   PRODUCTOS
+========================= */
+
+const products = [];
+
+/* VESTIDOS */
+
+const dressNames = [
+
+'Elegance Púrpura',
+'Scarlet Luxe',
+'Aurora',
+'Ruby Glow',
+'Majestic',
+'Velvet Queen',
+'Imperial',
+'Améthyste',
+'Rouge Royale',
+'Nocturne',
+'Divine',
+'Garnet Dream',
+'Purple Empress',
+'Crimson Grace',
+'Midnight Gala',
+'Royal Bloom',
+'Velvet Rose',
+'Mystic Silk',
+'Crown Night',
+'Gracia'
+
+];
+
+const dressPrices = [
+
+599900,
+649900,
+579900,
+689900,
+629900,
+739900,
+829900,
+559900,
+699900,
+899900,
+769900,
+619900,
+949900,
+729900,
+999900,
+679900,
+589900,
+879900,
+1099900,
+799900
+
+];
+
+const dressColors = [
+
+'morado',
+'rojo',
+'blanco',
+'dorado',
+'morado',
+'rojo',
+'negro',
+'blanco',
+'rojo',
+'dorado',
+'morado',
+'blanco',
+'rojo',
+'morado',
+'negro',
+'dorado',
+'blanco',
+'rojo',
+'morado',
+'dorado'
+
+];
+
+dressNames.forEach((n,i)=>{
+
+  products.push({
+
+    id:'v'+i,
+
+    name:'Vestido '+n,
+
+    alt:[
+      'Robe Lumière',
+      'Abito Reale',
+      'Robe Étoile',
+      'Abito Rosso',
+      'Robe Majesté',
+      'Abito Velluto',
+      'Robe Impériale',
+      'Abito Améthyste',
+      'Robe Royale',
+      'Abito Notte',
+      'Robe Divine',
+      'Abito Sogno',
+      'Robe Impératrice',
+      'Abito Grazia',
+      'Robe Minuit',
+      'Abito Fiore Reale',
+      'Robe Rose',
+      'Abito Mistico',
+      'Robe Couronne',
+      'Abito Eleganza'
+    ][i],
+
+    cat:'vestido',
+
+    color:dressColors[i],
+
+    price:dressPrices[i],
+
+    img:imgs[i]
+
+  });
+
+});
+
+/* PANTALONES */
+
+const pantNames = [
+
+'Palazzo Luxe',
+'Sastre Elite',
+'Satinado Noir',
+'Royal Fit',
+'Burgundy Chic',
+'Velvet Tailor',
+'Imperial Wide',
+'Purple Line',
+'Scarlet Class',
+'Midnight Tailored'
+
+];
+
+const pantPrices = [
+
+399900,
+369900,
+349900,
+379900,
+359900,
+419900,
+449900,
+389900,
+429900,
+459900
+
+];
+
+const pantColors = [
+
+'dorado',
+'blanco',
+'negro',
+'morado',
+'rojo',
+'blanco',
+'dorado',
+'morado',
+'rojo',
+'negro'
+
+];
+
+pantNames.forEach((n,i)=>{
+
+  products.push({
+
+    id:'p'+i,
+
+    name:'Pantalón '+n,
+
+    alt:[
+      'Pantalon Palazzo',
+      'Pantalone Sartoriale',
+      'Pantalon Satin Noir',
+      'Pantalone Reale',
+      'Pantalon Bordeaux',
+      'Pantalone Velluto',
+      'Pantalon Impérial',
+      'Pantalone Viola',
+      'Pantalon Écarlate',
+      'Pantalone Mezzanotte'
+    ][i],
+
+    cat:'pantalon',
+
+    color:pantColors[i],
+
+    price:pantPrices[i],
+
+    img:trouserImgs[i]
+
+  });
+
+});
+
+/* TACONES */
+
+const heelNames = [
+
+'Royal Purple',
+'Scarlet Shine',
+'Glam Black',
+'Velvet Wine',
+'Crystal Moon'
+
+];
+
+const heelPrices = [
+
+299900,
+289900,
+279900,
+309900,
+329900
+
+];
+
+const heelColors = [
+
+'morado',
+'rojo',
+'negro',
+'dorado',
+'blanco'
+
+];
+
+heelNames.forEach((n,i)=>{
+
+  products.push({
+
+    id:'t'+i,
+
+    name:'Tacón '+n,
+
+    alt:[
+      'Talon Royal',
+      'Tacco Scarlatto',
+      'Talon Noir',
+      'Tacco Velluto',
+      'Talon Cristal'
+    ][i],
+
+    cat:'tacon',
+
+    color:heelColors[i],
+
+    price:heelPrices[i],
+
+    img:imgs[30+i]
+
+  });
+
+});
+
+/* =========================
+   CART
+========================= */
+
+let cart =
+  JSON.parse(
+    localStorage.getItem('modaygracia-cart') || '{}'
+  );
+
+let currentColor = 'todos';
+
+/* =========================
+   FORMATO COP
+========================= */
+
+function formatCOP(n){
+
+  return new Intl.NumberFormat(
+    'es-CO',
+    {
+      style:'currency',
+      currency:'COP',
+      maximumFractionDigits:0
+    }
+  ).format(Number(n));
+
+}
+
+/* =========================
+   RENDER PRODUCTS
+========================= */
+
+function renderProducts(){
+
+  const q =
+    document
+      .getElementById('search')
+      .value
+      .toLowerCase();
+
+  const cat =
+    document
+      .getElementById('filterCat')
+      .value;
+
+  const max =
+    +document
+      .getElementById('maxPrice')
+      .value;
+
+  const list =
+    products.filter(p=>
+
+      (cat==='todos'||p.cat===cat)
+
+      &&
+
+      (currentColor==='todos'||p.color===currentColor)
+
+      &&
+
+      p.price<=max
+
+      &&
+
+      (
+        p.name.toLowerCase().includes(q)
+
+        ||
+
+        p.alt.toLowerCase().includes(q)
+      )
+
+    );
+
+  document
+    .getElementById('productGrid')
+    .innerHTML =
+
+    list.map(p=>`
+
+      <article class="card">
+
+        <button
+          class="heart"
+          onclick="toggleHeart(this)">
+          ♡
+        </button>
+
+        <div
+          class="product-img"
+          style="
+            background-image:url('${p.img}')
+          ">
+        </div>
+
+        <div class="card-body">
+
+          <div class="tag">
+            ${p.cat.toUpperCase()} · RECICLADO
+          </div>
+
+          <div class="name">
+            ${p.name}
+          </div>
+
+          <div class="international">
+            ${p.alt}
+          </div>
+
+          <div class="price">
+            ${formatCOP(p.price)}
+          </div>
+
+          <div class="card-actions">
+
+            <button
+              class="add"
+              onclick="addToCart('${p.id}')">
+              AGREGAR 👜
+            </button>
+
+            <button
+              class="try"
+              onclick="tryOn('${p.id}')">
+              PROBAR
+            </button>
+
+          </div>
+
+        </div>
+
+      </article>
+
+    `).join('')
+
+    ||
+
+    `
+      <p
+        style="
+          grid-column:1/-1;
+          text-align:center;
+          padding:40px;
+          color:#bcaabd;
+        ">
+        No encontramos prendas con esos filtros.
+      </p>
+    `;
+
+}
+
+/* =========================
+   FILTERS
+========================= */
+
+function setCat(cat,el){
+
+  document
+    .getElementById('filterCat')
+    .value=cat;
+
+  currentColor='todos';
+
+  document
+    .querySelectorAll('.tabs .tab')
+    .forEach(x=>
+      x.classList.remove('active')
+    );
+
+  if(el)
+    el.classList.add('active');
+
+  renderProducts();
+
+}
+
+function filterColor(c){
+
+  currentColor=c;
+
+  renderProducts();
+
+}
+
+function resetFilters(){
+
+  document
+    .getElementById('search')
+    .value='';
+
+  document
+    .getElementById('search2')
+    .value='';
+
+  document
+    .getElementById('filterCat')
+    .value='todos';
+
+  document
+    .getElementById('maxPrice')
+    .value=1200000;
+
+  document
+    .getElementById('priceValue')
+    .textContent=
+      formatCOP(1200000);
+
+  currentColor='todos';
+
+  renderProducts();
+
+}
+
+function toggleHeart(el){
+
+  el.classList.toggle('liked');
+
+  el.textContent =
+    el.classList.contains('liked')
+      ? '♥'
+      : '♡';
+
+}
+
+/* =========================
+   CART FUNCTIONS
+========================= */
+
+function addToCart(id){
+
+  cart[id]=(cart[id]||0)+1;
+
+  saveCart();
+
+  showToast(
+    '✨ Prenda añadida a tu armario'
+  );
+
+  updateCart();
+
+}
+
+function saveCart(){
+
+  localStorage.setItem(
+    'modaygracia-cart',
+    JSON.stringify(cart)
+  );
+
+}
+
+function updateCart(){
+
+  let entries =
+    Object
+      .entries(cart)
+      .filter(([id,q])=>q>0);
+
+  let count =
+    entries.reduce(
+      (a,[,q])=>a+q,
+      0
+    );
+
+  let total =
+    entries.reduce(
+      (a,[id,q])=>
+        a+
+        products.find(
+          p=>p.id===id
+        ).price*q,
+      0
+    );
+
+  document
+    .getElementById('cartCount')
+    .textContent=count;
+
+  document
+    .getElementById('floatingCount')
+    .textContent=count;
+
+  document
+    .getElementById('subtotal')
+    .textContent=
+      formatCOP(total);
+
+  document
+    .getElementById('total')
+    .textContent=
+      formatCOP(total);
+
+  document
+    .getElementById('cartItems')
+    .innerHTML =
+
+    entries.length
+
+    ?
+
+    entries.map(([id,q])=>{
+
+      let p =
+        products.find(
+          x=>x.id===id
+        );
+
+      return `
+
+        <div class="cart-item">
+
+          <div
+            class="thumb"
+            style="
+              background-image:url('${p.img}')
+            ">
+          </div>
+
+          <div>
+
+            <b>
+              ${p.name}
+            </b>
+
+            <div
+              style="
+                color:#d5bfd3;
+                font-size:12px;
+              ">
+              ${formatCOP(p.price)}
+            </div>
+
+            <div class="qty">
+
+              <button
+                onclick="
+                  changeQty('${id}',-1)
+                ">
+                −
+              </button>
+
+              <span>
+                ${q}
+              </span>
+
+              <button
+                onclick="
+                  changeQty('${id}',1)
+                ">
+                +
+              </button>
+
+            </div>
+
+          </div>
+
+          <button
+            class="remove"
+            onclick="
+              removeItem('${id}')
+            ">
+            🗑
+          </button>
+
+        </div>
+
+      `;
+
+    }).join('')
+
+    :
+
+    `
+      <div class="empty">
+        Tu armario está vacío.
+        <br>
+        ¡Añade una prenda que te represente! ♡
+      </div>
+    `;
+
+}
+
+function changeQty(id,d){
+
+  cart[id]=(cart[id]||0)+d;
+
+  if(cart[id]<=0)
+    delete cart[id];
+
+  saveCart();
+
+  updateCart();
+
+}
+
+function removeItem(id){
+
+  delete cart[id];
+
+  saveCart();
+
+  updateCart();
+
+}
+
+function openCart(){
+
+  document
+    .getElementById('drawer')
+    .classList.add('open');
+
+  document
+    .getElementById('overlay')
+    .classList.add('show');
+
+  updateCart();
+
+}
+
+function closeCart(){
+
+  document
+    .getElementById('drawer')
+    .classList.remove('open');
+
+  document
+    .getElementById('overlay')
+    .classList.remove('show');
+
+}
+
+/* =========================
+   TOAST
+========================= */
+
+function showToast(t){
+
+  let x =
+    document.getElementById('toast');
+
+  x.textContent=t;
+
+  x.classList.add('show');
+
+  setTimeout(
+    ()=>x.classList.remove('show'),
+    2200
+  );
+
+}
+
+/* =========================
+   COUPON
+========================= */
+
+function copyCode(c){
+
+  navigator.clipboard?.writeText(c);
+
+  showToast(
+    '🎟️ Código copiado: '+c
+  );
+
+}
+
+/* =========================
+   STORY
+========================= */
+
+function openStory(){
+
+  document
+    .getElementById('storyModal')
+    .classList.add('show');
+
+}
+
+function closeStory(){
+
+  document
+    .getElementById('storyModal')
+    .classList.remove('show');
+
+}
+
+/* =========================
+   VIRTUAL TRY ON
+========================= */
+
+function tryOn(id){
+
+  let p =
+    products.find(
+      x=>x.id===id
+    );
+
+  const g =
+    document.getElementById('garment');
+
+  document
+    .getElementById('tryTitle')
+    .textContent =
+      'Probador virtual · '+p.name;
+
+  document
+    .getElementById('tryDescription')
+    .textContent =
+      'Maniquí digital: '+
+      p.alt+
+      ' · '+
+      p.color+
+      ' · '+
+      formatCOP(p.price);
+
+  document
+    .getElementById('tryDetails')
+    .textContent =
+      'La prenda seleccionada aparece puesta sobre el maniquí para visualizar su estilo.';
+
+  g.className =
+    'garment '+
+    (
+      p.cat==='vestido'
+        ? 'dress'
+        : p.cat==='pantalon'
+          ? 'pants'
+          : 'heel'
+    )+
+    ' '+
+    (
+      p.color==='blanco'
+        ? 'white'
+        : p.color==='dorado'
+          ? 'gold'
+          : ''
+    );
+
+  g.textContent =
+    p.cat==='tacon'
+      ? 'MODA Y GRACIA'
+      : '';
+
+  document
+    .getElementById('tryModal')
+    .classList.add('show');
+
+}
+
+function closeTry(){
+
+  document
+    .getElementById('tryModal')
+    .classList.remove('show');
+
+}
+
+/* =========================
+   CHECKOUT
+========================= */
+
+function checkout(){
+
+  if(
+    Object.keys(cart).length===0
+  ){
+
+    return showToast(
+      'Tu armario está vacío ♡'
+    );
+
+  }
+
+  showToast(
+    '🛍️ Demo: compra preparada. Conecta aquí tu pasarela de pago.'
+  );
+
+}
+
+/* =========================
+   START
+========================= */
+
+renderProducts();
+
+updateCart();
+
+</script>
+
+</body>
+</html>
